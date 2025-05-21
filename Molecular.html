@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variabilidad Genética</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background: rgb(0, 5, 13);
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+
+        .fondo {
+            width: 100%;
+            background: radial-gradient(circle at center, rgba(0, 153, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 40%, rgba(0, 255, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 30% 60%, rgba(200, 0, 255, 0.15) 0%, transparent 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            flex-direction: column;
+        }
+
+        .panel {
+            position: relative;
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 1000px;
+            height: 500px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.consumer.es/app/uploads/2019/07/img_perros-razas-.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+            transform: scale(1.1);
+        }
+
+        .panel h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(0, 153, 255, 0.5);
+        }
+
+
+        .especie {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 30px;
+            width: 900px;
+            margin: 0 auto 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .especie img {
+            width: 300px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .texto {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .texto h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #00e1ff;
+        }
+
+        .texto p {
+            margin-bottom: 15px;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .texto a {
+            color: #55e3ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .fuente {
+            width: 80%;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 0.95em;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .fuente a {
+            color: #66ccff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .fuente a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            text-align: center;
+            color: #bbb;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer::before {
+            content: "Creado por Pablo Labadía Santana";
+            margin-right: 6px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .panel h1 {
+                font-size: 2em;
+            }
+
+            .especie {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .especie img {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .texto {
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .texto h2 {
+                font-size: 1.3em;
+            }
+
+            .fuente iframe {
+                height: 500px;
+            }
+
+            .fuente {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            footer {
+                font-size: 0.8em;
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .especie {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .especie img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .texto {
+                width: 100%;
+                padding: 0 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fondo">
+        <div class="panel">
+            <div class="panel-bg"></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Variabilidad genética</h1>
+        </div>
+
+
+        <section class="especie">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Coat_types_3.jpg/250px-Coat_types_3.jpg"
+                alt="Variabilidad en perros">
+            <div class="texto">
+                <h2>Perro doméstico</h2>
+                <p>
+                    El perro doméstico es un claro ejemplo de variabilidad genética. Existen cientos de razas con
+                    características físicas y comportamentales muy distintas, fruto de la selección artificial. Esta
+                    diversidad genética permite adaptaciones a distintos entornos y funciones específicas.
+                </p>
+            </div>
+        </section>
+
+        <div class="fuente">
+            <p>Fuente de información:</p>
+            <iframe src="https://es.wikipedia.org/wiki/Perro" width="100%" height="100%"
+                style="border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
+            </iframe>
+            <p>
+                <a href="https://es.wikipedia.org/wiki/Perro" target="_blank">
+                    Ir a la página original
+                </a>
+            </p>
+        </div>
+
+
+        <footer>
+            ( 21 de mayo de 2025 )
+        </footer>
+</body>
+
+</html>
